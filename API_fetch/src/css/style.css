@@ -1,0 +1,181 @@
+
+* {
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+body {
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  background: #f1f3f6;
+
+  padding: 40px;
+
+}
+
+/* ===== MAIN ALBUM GRID ===== */
+
+#albums-container {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 40px;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+}
+
+/* ===== ALBUM BOX ===== */
+
+.album {
+
+  background: #ffffff;
+
+  padding: 24px;
+
+  border-radius: 14px;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+.album h3 {
+
+  font-size: 22px;
+
+  margin-bottom: 18px;
+
+  color: #222;
+
+}
+
+/* ===== CARDS ROW ===== */
+
+.cards {
+
+  display: flex;
+
+  gap: 20px;
+
+}
+
+/* ===== CARD ===== */
+
+.card {
+
+  width: 240px;
+
+  background: #fafafa;
+
+  border-radius: 14px;
+
+  padding: 14px;
+
+  position: relative;
+
+  border: 1px solid #e0e0e0;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+
+}
+
+/* ===== IMAGE ===== */
+
+.card img {
+
+  width: 100%;
+
+  height: 150px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+}
+
+/* ===== ID BADGE ===== */
+
+.photo-id {
+
+  position: absolute;
+
+  top: 10px;
+
+  right: 12px;
+
+  background: #000;
+
+  color: #fff;
+
+  font-size: 12px;
+
+  padding: 4px 8px;
+
+  border-radius: 6px;
+
+}
+
+/* ===== TITLE (2 LINE ELLIPSIS) ===== */
+
+.title {
+
+  margin-top: 12px;
+
+  font-size: 15px;
+
+  line-height: 1.4;
+
+  color: #333;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 2;
+
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+
+  #albums-container {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .cards {
+
+    flex-direction: column;
+
+  }
+
+  .card {
+
+    width: 100%;
+
+  }
+
+}
+ 
